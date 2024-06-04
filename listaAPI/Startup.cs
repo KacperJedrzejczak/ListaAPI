@@ -34,7 +34,6 @@ namespace YourProjectName
                 app.UseDeveloperExceptionPage();
             }
 
-            // Middleware Swagger
             app.UseSwagger();
 
             // Middleware Swagger UI
