@@ -10,16 +10,23 @@ namespace AnimeAPI.Services
     {
         private readonly string _filePath;
 
-        public AnimeService()
+        public AnimeService(string filePath = "Data/anime.json")
         {
-            // Ustawienie ścieżki do pliku animes.json w katalogu data
-            var directory = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-            _filePath = Path.Combine(directory, "anime.json");
+            if (string.IsNullOrWhiteSpace(filePath))
+            {
+                throw new ArgumentException("File path cannot be null or empty.", nameof(filePath));
+            }
 
-            // Upewnij się, że plik istnieje, jeśli nie, utwórz go
+            _filePath = filePath;
+            var directory = Path.GetDirectoryName(_filePath);
+
+            if (!string.IsNullOrWhiteSpace(directory) && !Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
             if (!File.Exists(_filePath))
             {
-                Directory.CreateDirectory(directory); // Utwórz katalog, jeśli nie istnieje
                 File.WriteAllText(_filePath, "[]");
             }
         }

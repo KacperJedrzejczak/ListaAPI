@@ -32,3 +32,4 @@ F:\Programiki\Jeden\listaAPI1\listaAPI\obj\Debug\net8.0\listaAPI.genruntimeconfi
 F:\Programiki\Jeden\listaAPI1\listaAPI\obj\Debug\net8.0\ref\listaAPI.dll
 F:\Programiki\Jeden\listaAPI1\listaAPI\bin\Debug\net8.0\Data\anime.json
 F:\Programiki\Jeden\listaAPI1\listaAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+F:\Programiki\Jeden\listaAPI1\listaAPI\obj\Debug\net8.0\listaAPI.sourcelink.json
